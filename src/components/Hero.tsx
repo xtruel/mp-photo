@@ -143,7 +143,7 @@ export default function Hero({ settings, onNavigate }: HeroProps) {
               >
                 {/* AFTER image (Full view under) */}
                 <img
-                  src="portfolio/paesaggi-dopo.jpg"
+                  src="portfolio/paesaggi-dopo.jpg?v=2"
                   alt="Paesaggio dopo il fotoritocco M.P. Photo"
                   className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
                   referrerPolicy="no-referrer"
@@ -156,7 +156,7 @@ export default function Hero({ settings, onNavigate }: HeroProps) {
                   style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100, 0 100)` }}
                 >
                   <img
-                    src="portfolio/paesaggi-prima.jpg"
+                    src="portfolio/paesaggi-prima.jpg?v=2"
                     alt="Paesaggio prima del fotoritocco"
                     className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
                     referrerPolicy="no-referrer"

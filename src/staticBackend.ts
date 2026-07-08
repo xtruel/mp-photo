@@ -12,7 +12,7 @@
 
 import seedDb from '../db.json';
 
-const STORAGE_KEY = 'mp_static_db_v2';
+const STORAGE_KEY = 'mp_static_db_v3';
 
 type AnyObj = Record<string, any>;
 
