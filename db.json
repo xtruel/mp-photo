@@ -1,13 +1,13 @@
 {
   "stats": {
-    "views": 1762,
+    "views": 1774,
     "quotes": 48,
     "whatsappClicks": 185,
     "sources": {
       "google": 812,
       "instagram": 486,
       "facebook": 301,
-      "direct": 128,
+      "direct": 130,
       "altro": 27
     }
   },
@@ -43,58 +43,36 @@
   "portfolio": [
     {
       "id": "p-1",
-      "title": "Porsche 911 Carrera S",
+      "title": "Audi A4 — annuncio di vendita",
       "category": "auto",
-      "beforeImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
-      "afterImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
-      "description": "Fotoritocco per automotive marketing: rimozione riflessi indesiderati, esaltazione dei riflessi dorati del sole, bilanciamento del contrasto ed enfasi sul design aerodinamico.",
+      "beforeImage": "portfolio/auto-prima.jpg",
+      "afterImage": "portfolio/auto-dopo.jpg",
+      "description": "Carrozzeria pulita, vernice esaltata, luce e riflessi migliorati e sfondo valorizzato: un annuncio che cattura subito l'attenzione.",
       "featured": true,
-      "beforeFilter": "saturate-[0.6] brightness-[0.8] contrast-[0.85] blur-[0.5px]",
-      "afterFilter": "saturate-[1.3] brightness-[1.08] contrast-[1.12]"
+      "beforeFilter": "",
+      "afterFilter": ""
     },
     {
       "id": "p-2",
-      "title": "Villa Moderna sul Lago",
+      "title": "Villa con piscina",
       "category": "immobili",
-      "beforeImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-      "afterImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-      "description": "Fotoritocco architettonico: raddrizzamento delle linee verticali, bilanciamento delle luci e ombre (simulazione HDR), rimpiazzo del cielo con un tramonto dorato ed eliminazione di fili elettrici.",
+      "beforeImage": "portfolio/immobili-prima.jpg",
+      "afterImage": "portfolio/immobili-dopo.jpg",
+      "description": "Cielo sostituito, luce ed erba ravvivate, acqua della piscina resa cristallina: l'immobile diventa molto più attraente.",
       "featured": true,
-      "beforeFilter": "saturate-[0.4] brightness-[0.8] contrast-[0.85] sepia-[0.1]",
-      "afterFilter": "saturate-[1.25] brightness-[1.12] contrast-[1.05]"
+      "beforeFilter": "",
+      "afterFilter": ""
     },
     {
       "id": "p-3",
-      "title": "Ritratto Fine Art",
-      "category": "ritratti",
-      "beforeImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
-      "afterImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
-      "description": "Ritratto editoriale di lusso: levigatura della pelle non distruttiva conservando la texture originale, correzione cromatica dei capelli, enfasi sull'iride, e color grading caldo e cinematografico.",
-      "featured": true,
-      "beforeFilter": "grayscale-[0.3] brightness-[0.85] contrast-[0.9]",
-      "afterFilter": "saturate-[1.15] brightness-[1.05] contrast-[1.08] sepia-[0.05]"
-    },
-    {
-      "id": "p-4",
-      "title": "Tramonto sullo Yosemite",
+      "title": "Lago di montagna",
       "category": "paesaggi",
-      "beforeImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "afterImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "description": "Recupero paesaggistico: bilanciamento della gamma dinamica per rivelare i dettagli nelle zone d'ombra della roccia, rimozione della foschia atmosferica, ed esaltazione dei caldi colori del tramonto.",
+      "beforeImage": "portfolio/paesaggi-prima.jpg",
+      "afterImage": "portfolio/paesaggi-dopo.jpg",
+      "description": "Cielo aperto, colori e contrasto esaltati, riflessi dell'acqua e nitidezza migliorati mantenendo un aspetto naturale.",
       "featured": true,
-      "beforeFilter": "saturate-[0.5] brightness-[0.75] contrast-[0.85] blur-[0.2px]",
-      "afterFilter": "saturate-[1.35] brightness-[1.12] contrast-[1.15]"
-    },
-    {
-      "id": "p-5",
-      "title": "Orologio Minimal di Lusso",
-      "category": "prodotti",
-      "beforeImage": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
-      "afterImage": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
-      "description": "Fotoritocco e-commerce di lusso: pulizia da polvere e micro-graffi invisibili a occhio nudo, allineamento perfetto dei riflessi sui metalli, correzione del bianco, ed isolamento dello sfondo.",
-      "featured": true,
-      "beforeFilter": "saturate-[0.3] brightness-[0.85] contrast-[0.8] sepia-[0.1]",
-      "afterFilter": "saturate-[1.2] brightness-[1.15] contrast-[1.2]"
+      "beforeFilter": "",
+      "afterFilter": ""
     }
   ],
   "services": [
@@ -102,56 +80,67 @@
       "id": "s-1",
       "key": "auto",
       "icon": "Car",
-      "title": "Automotive Retouching",
-      "subtitle": "Esaltiamo le linee, eliminiamo i riflessi, creiamo pura emozione.",
-      "shortDesc": "Rendiamo le foto di auto irresistibili per inserzioni di vendita, cataloghi e marketing.",
-      "longDesc": "Il fotoritocco automotive richiede un occhio attento ai riflessi, alla geometria e al colore. Rimuoviamo imperfezioni stradali, riflessi indesiderati di alberi o palazzi sulla carrozzeria, sostituiamo gli sfondi per creare un look da studio, ed esaltiamo i dettagli dei cerchioni e della vernice. Perfetto per concessionarie, collezionisti privati ed editoria di lusso.",
-      "pricing": "A partire da 15€ / foto",
+      "title": "Fotoritocco Auto",
+      "subtitle": "Presenta il tuo veicolo nel modo migliore.",
+      "shortDesc": "Valorizziamo le fotografie di auto nuove, usate e sportive per vendite e cataloghi.",
+      "longDesc": "Valorizziamo le fotografie di auto nuove, usate e sportive attraverso correzione colori, rimozione imperfezioni, miglioramento della luce, riflessi, sfondi e dettagli. Ideale per concessionarie, rivenditori e privati che desiderano presentare il proprio veicolo nel modo migliore.",
+      "pricing": "Preventivo gratuito",
       "slug": "servizio-auto"
     },
     {
       "id": "s-2",
       "key": "immobili",
       "icon": "Home",
-      "title": "Immobiliare & Architettura",
-      "subtitle": "Spazi luminosi, linee perfette e viste spettacolari.",
-      "shortDesc": "Ottimizzazione di foto per agenzie immobiliari, hotel e interior designer.",
-      "longDesc": "Aiutiamo a vendere o affittare immobili fino al 40% più velocemente. Correggiamo le aberrazioni prospettiche (linee cadenti), fondiamo diverse esposizioni (HDR) per mostrare sia gli interni luminosi che la vista mozzafiato dalle finestre, sostituiamo cieli grigi con caldi tramonti, e rimuoviamo oggetti di disturbo come cavi elettrici o disordine. Ideale per annunci di alto livello.",
-      "pricing": "A partire da 20€ / foto",
+      "title": "Fotoritocco Immobiliare",
+      "subtitle": "Immobili più attraenti per i potenziali clienti.",
+      "shortDesc": "Ottimizziamo foto di appartamenti, ville, hotel e strutture ricettive.",
+      "longDesc": "Ottimizziamo le fotografie di appartamenti, ville, hotel e strutture ricettive aumentando luminosità, colori e definizione. Correggiamo prospettive, esposizione e piccoli difetti per rendere ogni immobile più attraente agli occhi dei potenziali clienti.",
+      "pricing": "Preventivo gratuito",
       "slug": "servizio-immobili"
     },
     {
       "id": "s-3",
       "key": "ritratti",
       "icon": "User",
-      "title": "Ritrattistica & Beauty",
-      "subtitle": "Retouch di lusso naturale, per far risplendere la tua unicità.",
-      "shortDesc": "Fotoritocco per ritratti personali, profili aziendali LinkedIn, modelle e moda.",
-      "longDesc": "La nostra filosofia è un ritocco naturale e invisibile. Eseguiamo levigatura della pelle avanzata tramite separazione delle frequenze e dodge & burn per mantenere intatta la trama naturale dei pori. Correggiamo le imperfezioni temporanee, esaltiamo la lucentezza degli occhi e dei capelli, imbianchiamo delicatamente i denti e modelliamo i volumi del viso con il digital make-up.",
-      "pricing": "A partire da 10€ / foto",
+      "title": "Ritocco Ritratti",
+      "subtitle": "Un risultato naturale che valorizza ogni volto.",
+      "shortDesc": "Miglioriamo ritratti personali e professionali mantenendo un aspetto naturale.",
+      "longDesc": "Miglioriamo ritratti personali e professionali mantenendo un risultato naturale. Correggiamo pelle, illuminazione, colori, piccoli difetti e dettagli, valorizzando ogni volto senza alterarne l'aspetto.",
+      "pricing": "Preventivo gratuito",
       "slug": "servizio-ritratti"
     },
     {
       "id": "s-4",
       "key": "paesaggi",
       "icon": "Mountain",
-      "title": "Paesaggi & Fine Art",
-      "subtitle": "Colori vibranti e atmosfere mozzafiato degne di una stampa d'arte.",
-      "shortDesc": "Sviluppo digitale e color grading professionale per foto naturalistiche e di viaggio.",
-      "longDesc": "Trasformiamo uno scatto piatto in un'opera d'arte. Regoliamo l'esposizione zonale per dare tridimensionalità, eliminiamo la foschia, applichiamo un color grading mirato per far risaltare le tonalità calde o fredde della natura, e puliamo la scena da elementi di disturbo come turisti, cartelli o spazzatura. Perfetto per fotografi, blogger e amanti del viaggio.",
-      "pricing": "A partire da 12€ / foto",
+      "title": "Fotoritocco Paesaggi",
+      "subtitle": "Atmosfere coinvolgenti, sempre realistiche.",
+      "shortDesc": "Esaltiamo cielo, luce, colori, contrasto e nitidezza dei tuoi paesaggi.",
+      "longDesc": "Esaltiamo la bellezza dei paesaggi migliorando cielo, luce, colori, contrasto e nitidezza. L'obiettivo è rendere ogni fotografia più coinvolgente mantenendo un aspetto realistico.",
+      "pricing": "Preventivo gratuito",
       "slug": "servizio-paesaggi"
     },
     {
       "id": "s-5",
       "key": "prodotti",
       "icon": "ShoppingBag",
-      "title": "Fotoritocco di Prodotto",
-      "subtitle": "Dettagli definiti, materiali realistici, conversioni massime.",
-      "shortDesc": "Fotoritocco e-commerce d'élite per Amazon, Shopify e cataloghi pubblicitari.",
-      "longDesc": "Nel commercio elettronico, l'immagine è tutto. Rimuoviamo la polvere, i riflessi e i micro-graffi. Scontorniamo il prodotto posizionandolo su sfondo bianco puro (RGB 255) o creiamo ombre e riflessi realistici su superfici d'appoggio. Regoliamo con precisione millimetrica i colori per garantire la massima fedeltà cromatica rispetto al prodotto reale, riducendo i resi.",
-      "pricing": "A partire da 8€ / foto",
+      "title": "Fotoritocco Prodotti",
+      "subtitle": "Massimo impatto visivo per e-commerce e social.",
+      "shortDesc": "Fotoritocco professionale per e-commerce, cataloghi e social media.",
+      "longDesc": "Realizziamo fotoritocchi professionali per e-commerce, cataloghi e social media. Miglioriamo colori, sfondi, riflessi, ombre e dettagli per valorizzare ogni prodotto e aumentarne l'impatto visivo.",
+      "pricing": "Preventivo gratuito",
       "slug": "servizio-prodotti"
+    },
+    {
+      "id": "s-6",
+      "key": "restauro",
+      "icon": "History",
+      "title": "Restauro Foto",
+      "subtitle": "Ridiamo vita alle fotografie rovinate dal tempo.",
+      "shortDesc": "Eliminiamo graffi, pieghe, macchie e segni del tempo dalle vecchie foto.",
+      "longDesc": "Ridiamo vita a fotografie rovinate o scolorite eliminando graffi, pieghe, macchie e segni del tempo. Possiamo restaurare vecchie fotografie mantenendo intatto il loro valore affettivo.",
+      "pricing": "Preventivo gratuito",
+      "slug": "servizio-restauro"
     }
   ],
   "reviews": [
@@ -197,11 +186,12 @@
   ],
   "settings": {
     "heroTitle": "Dai nuova vita alle tue fotografie.",
-    "heroSubtitle": "Fotoritocco professionale per auto, immobili, ritratti, paesaggi e prodotti.",
-    "whatsappNumber": "393471234567",
+    "heroSubtitle": "Fotoritocco professionale per auto, immobili, ritratti, paesaggi, prodotti e restauro foto.",
+    "whatsappNumber": "393931785834",
     "contactEmail": "info@mpphoto.it",
+    "instagram": "m.p_photo1",
     "showSpecialOffer": true,
-    "specialOfferText": "🔥 SCONTO 15% sul tuo primo ordine con preventivo online!",
-    "showBeforeAfterSandbox": true
+    "specialOfferText": "Preventivo gratuito e senza impegno — inviaci la tua foto",
+    "showBeforeAfterSandbox": false
   }
 }

@@ -77,6 +77,7 @@ export interface AppSettings {
   heroSubtitle: string;
   whatsappNumber: string;
   contactEmail: string;
+  instagram?: string;
   showSpecialOffer: boolean;
   specialOfferText: string;
   showBeforeAfterSandbox: boolean;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  Car, Home, User, Mountain, ShoppingBag, 
-  ArrowLeft, Check, Phone, FileText, Sparkles, HelpCircle 
+import {
+  Car, Home, User, Mountain, ShoppingBag, History,
+  ArrowLeft, Check, Phone, FileText, Sparkles, HelpCircle
 } from 'lucide-react';
 import { ServiceItem, PortfolioItem, AppSettings } from '../types';
 
@@ -34,6 +34,7 @@ export default function Services({
       case 'User': return User;
       case 'Mountain': return Mountain;
       case 'ShoppingBag': return ShoppingBag;
+      case 'History': return History;
       default: return Sparkles;
     }
   };

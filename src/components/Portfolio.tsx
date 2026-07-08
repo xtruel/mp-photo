@@ -105,7 +105,7 @@ export default function Portfolio({ portfolioItems }: PortfolioProps) {
                     onMouseDown={() => setActiveSliderId(item.id)}
                     onMouseUp={() => setActiveSliderId(null)}
                     onMouseLeave={() => setActiveSliderId(null)}
-                    className="relative aspect-[16/11] w-full cursor-ew-resize overflow-hidden select-none"
+                    className="relative aspect-[4/5] w-full cursor-ew-resize overflow-hidden select-none"
                     id={`slider-container-${item.id}`}
                   >
                     {/* AFTER image */}
@@ -127,7 +127,7 @@ export default function Portfolio({ portfolioItems }: PortfolioProps) {
                         src={item.beforeImage} 
                         alt={`${item.title} prima del fotoritocco`}
                         className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-                        style={{ filter: item.beforeFilter || "grayscale-[0.35] brightness-[0.8] contrast-[0.85]" }}
+                        style={{ filter: item.beforeFilter || "none" }}
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute bottom-3 left-3 z-10 bg-amber-500 px-2 py-0.5 rounded text-[10px] text-black font-extrabold uppercase tracking-widest">Prima</div>

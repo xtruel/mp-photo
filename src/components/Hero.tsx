@@ -142,32 +142,26 @@ export default function Hero({ settings, onNavigate }: HeroProps) {
                 id="hero-slider-container"
               >
                 {/* AFTER image (Full view under) */}
-                <img 
-                  src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Porsche 911 GT3 RS Retouched" 
+                <img
+                  src="portfolio/paesaggi-dopo.jpg"
+                  alt="Paesaggio dopo il fotoritocco M.P. Photo"
                   className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-                  style={{
-                    filter: "saturate(1.3) brightness(1.08) contrast(1.12)"
-                  }}
                   referrerPolicy="no-referrer"
                 />
-                <span className="absolute bottom-4 right-4 z-10 bg-black/60 backdrop-blur-md px-2.5 py-1 text-2xs text-white font-bold uppercase tracking-wider rounded border border-zinc-800">Dopo</span>
+                <span className="absolute bottom-4 right-4 z-10 bg-black/60 backdrop-blur-md px-2.5 py-1 text-2xs text-white font-semibold uppercase tracking-wider rounded-lg border border-white/10">Dopo</span>
 
                 {/* BEFORE image overlay */}
-                <div 
+                <div
                   className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none"
                   style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100, 0 100)` }}
                 >
-                  <img 
-                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" 
-                    alt="Porsche 911 GT3 RS Original" 
+                  <img
+                    src="portfolio/paesaggi-prima.jpg"
+                    alt="Paesaggio prima del fotoritocco"
                     className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-                    style={{
-                      filter: "saturate(0.6) brightness(0.8) contrast(0.85) blur(0.5px)"
-                    }}
                     referrerPolicy="no-referrer"
                   />
-                  <span className="absolute bottom-4 left-4 z-10 bg-amber-500 px-2.5 py-1 text-2xs text-black font-extrabold uppercase tracking-wider rounded">Prima</span>
+                  <span className="absolute bottom-4 left-4 z-10 bg-[#D4AF37] px-2.5 py-1 text-2xs text-black font-bold uppercase tracking-wider rounded-lg">Prima</span>
                 </div>
 
                 {/* Handle slider bar */}
