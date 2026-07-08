@@ -6,12 +6,15 @@ import {
 
 import Header from './components/Header';
 import Hero from './components/Hero';
+import HowItWorks from './components/HowItWorks';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
+import CtaBand from './components/CtaBand';
 import WhyChooseUs from './components/WhyChooseUs';
 import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
 import QuoteForm from './components/QuoteForm';
+import WhatsAppFloat from './components/WhatsAppFloat';
 import AdminPanel from './components/AdminPanel';
 
 import { DatabaseState, ReviewItem, AppSettings } from './types';
@@ -243,24 +246,34 @@ export default function App() {
           {currentView === 'home' && (
             <main className="flex-1">
               
-              <Hero 
-                settings={settings} 
-                onNavigate={handleNavigate} 
+              <Hero
+                settings={settings}
+                onNavigate={handleNavigate}
               />
-              
-              <Services 
-                services={dbState.services} 
+
+              <HowItWorks
+                settings={settings}
+                onNavigate={handleNavigate}
+              />
+
+              <Services
+                services={dbState.services}
                 portfolioItems={dbState.portfolio}
                 activeServiceKey={activeServiceKey}
                 onSelectService={setActiveServiceKey}
                 onNavigate={handleNavigate}
                 settings={settings}
               />
-              
-              <Portfolio 
-                portfolioItems={dbState.portfolio} 
+
+              <Portfolio
+                portfolioItems={dbState.portfolio}
               />
-              
+
+              <CtaBand
+                settings={settings}
+                onNavigate={handleNavigate}
+              />
+
               <WhyChooseUs />
               
               <Reviews 
@@ -375,6 +388,9 @@ export default function App() {
 
             </div>
           </footer>
+
+          {/* Fixed WhatsApp button — visible on every client view */}
+          <WhatsAppFloat settings={settings} />
 
         </div>
       )}
