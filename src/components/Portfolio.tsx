@@ -121,7 +121,7 @@ export default function Portfolio({ portfolioItems }: PortfolioProps) {
                     {/* BEFORE image (clipped overlay) */}
                     <div 
                       className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none"
-                      style={{ clipPath: `polygon(0 0, ${currentPos}% 0, ${currentPos}% 100, 0 100)` }}
+                      style={{ clipPath: `polygon(0 0, ${currentPos}% 0, ${currentPos}% 100%, 0 100%)` }}
                     >
                       <img 
                         src={item.beforeImage} 

@@ -153,7 +153,7 @@ export default function Hero({ settings, onNavigate }: HeroProps) {
                 {/* BEFORE image overlay */}
                 <div
                   className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none"
-                  style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100, 0 100)` }}
+                  style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }}
                 >
                   <img
                     src="portfolio/paesaggi-prima.jpg?v=2"
