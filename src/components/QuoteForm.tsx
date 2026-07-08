@@ -91,12 +91,39 @@ export default function QuoteForm({ settings, onNavigate }: QuoteFormProps) {
     setFiles(prev => prev.filter((_, i) => i !== index));
   };
 
+  // Build a complete lead message for WhatsApp (so the request actually reaches M.P. Photo)
+  const buildLeadMessage = () => {
+    const serviceLabel = service.charAt(0).toUpperCase() + service.slice(1);
+    const lines = [
+      '📸 *Nuova richiesta di preventivo — M.P. Photo*',
+      '',
+      `👤 Nome: ${name}`,
+      `📧 Email: ${email}`,
+      phone ? `📱 Telefono: ${phone}` : '',
+      `🗂️ Servizio: ${serviceLabel}`,
+      '',
+      `✏️ Descrizione: ${description}`,
+      '',
+      files.length > 0
+        ? `🖼️ Allego ${files.length} foto qui nella chat.`
+        : '🖼️ Invio le foto qui nella chat.',
+    ].filter(Boolean);
+    return encodeURIComponent(lines.join('\n'));
+  };
+
+  const openWhatsAppLead = () => {
+    window.open(`https://wa.me/${settings.whatsappNumber}?text=${buildLeadMessage()}`, '_blank');
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email || !description) {
       setErrorMsg('Inserisci nome, email e descrizione modifiche.');
       return;
     }
+
+    // Open WhatsApp synchronously (within the user gesture) so the lead reaches M.P. Photo.
+    openWhatsAppLead();
 
     setUploading(true);
     setUploadProgress(10);
@@ -162,33 +189,33 @@ export default function QuoteForm({ settings, onNavigate }: QuoteFormProps) {
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight font-sans">Richiesta Ricevuta!</h1>
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight font-sans">Ci siamo quasi!</h1>
             <p className="text-zinc-400 font-sans text-sm md:text-base max-w-lg mx-auto">
-              Grazie <span className="text-white font-semibold">{name}</span>, abbiamo registrato la tua richiesta di preventivo gratuito nel nostro database di lavorazione con ID temporaneo.
+              Grazie <span className="text-white font-semibold">{name}</span>! Ti abbiamo aperto <span className="text-white font-semibold">WhatsApp</span> con la tua richiesta già compilata: <span className="text-white font-semibold">invia il messaggio</span> per completare — così la riceviamo subito.
             </p>
           </div>
 
           {/* Value block explaining the response flow */}
           <div className="p-5 bg-zinc-900/60 rounded-2xl border border-zinc-900 text-left space-y-4 max-w-md mx-auto text-xs leading-relaxed">
-            <p className="font-bold text-amber-500 uppercase tracking-widest font-mono text-[10px] text-center">Fasi della lavorazione:</p>
+            <p className="font-bold text-amber-500 uppercase tracking-widest font-mono text-[10px] text-center">Come procediamo:</p>
             <div className="flex items-start gap-3">
               <span className="w-5 h-5 rounded-full bg-amber-500 text-black font-bold flex items-center justify-center text-[10px] shrink-0 mt-0.5">1</span>
-              <p className="text-zinc-300"><span className="font-bold text-white">Analisi Tecnica:</span> Un fotoritoccatore senior analizzerà lo stato cromatico delle foto inviate.</p>
+              <p className="text-zinc-300"><span className="font-bold text-white">Invia su WhatsApp:</span> premi invio nella chat aperta e allega le tue foto (puoi mandarne quante vuoi).</p>
             </div>
             <div className="flex items-start gap-3">
               <span className="w-5 h-5 rounded-full bg-amber-500 text-black font-bold flex items-center justify-center text-[10px] shrink-0 mt-0.5">2</span>
-              <p className="text-zinc-300"><span className="font-bold text-white">Preventivo via Email:</span> Riceverai una mail con la nostra stima accurata del prezzo e dei tempi di consegna.</p>
+              <p className="text-zinc-300"><span className="font-bold text-white">Preventivo gratuito:</span> analizziamo le foto e ti rispondiamo con prezzo e tempi, di solito in poco tempo.</p>
             </div>
           </div>
 
           <div className="pt-4 border-t border-zinc-900 flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={handleWhatsAppInstant}
+              onClick={openWhatsAppLead}
               className="flex items-center justify-center gap-2 px-8 py-3.5 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-black font-bold rounded-full transition-all text-sm"
               id="success-whatsapp-cta"
             >
               <Phone className="w-4 h-4" />
-              Sincronizza via WhatsApp
+              Riapri WhatsApp
             </button>
             <button
               onClick={() => {
