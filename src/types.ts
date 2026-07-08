@@ -1,7 +1,16 @@
+export interface TrafficSources {
+  google: number;
+  instagram: number;
+  facebook: number;
+  direct: number;
+  altro: number;
+}
+
 export interface StatDetails {
   views: number;
   quotes: number;
   whatsappClicks: number;
+  sources?: TrafficSources;
 }
 
 export interface QuoteRequest {

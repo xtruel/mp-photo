@@ -15,7 +15,12 @@ function readDb() {
     console.error("Errore durante la lettura del database:", err);
   }
   return {
-    stats: { views: 0, quotes: 0, whatsappClicks: 0 },
+    stats: {
+      views: 0,
+      quotes: 0,
+      whatsappClicks: 0,
+      sources: { google: 0, instagram: 0, facebook: 0, direct: 0, altro: 0 },
+    },
     quotes: [],
     portfolio: [],
     services: [],
@@ -62,7 +67,7 @@ async function startServer() {
   // API: Track events (views, whatsapp clicks)
   app.post("/api/stats/increment", (req, res) => {
     try {
-      const { type } = req.body;
+      const { type, source } = req.body;
       const db = readDb();
       if (type === "views") {
         db.stats.views = (db.stats.views || 0) + 1;
@@ -70,6 +75,10 @@ async function startServer() {
         db.stats.whatsappClicks = (db.stats.whatsappClicks || 0) + 1;
       } else if (type === "quotes") {
         db.stats.quotes = (db.stats.quotes || 0) + 1;
+      } else if (type === "source") {
+        if (!db.stats.sources) db.stats.sources = { google: 0, instagram: 0, facebook: 0, direct: 0, altro: 0 };
+        const key = ["google", "instagram", "facebook", "direct"].includes(source) ? source : "altro";
+        db.stats.sources[key] = (db.stats.sources[key] || 0) + 1;
       }
       writeDb(db);
       res.json({ success: true, stats: db.stats });

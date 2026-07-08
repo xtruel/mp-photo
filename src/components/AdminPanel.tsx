@@ -533,6 +533,52 @@ export default function AdminPanel({ onClose, onRefreshAllData, dbState }: Admin
 
             </div>
 
+            {/* Traffic sources — where visitors come from */}
+            {(() => {
+              const s = dbState.stats.sources || { google: 0, instagram: 0, facebook: 0, direct: 0, altro: 0 };
+              const rows = [
+                { key: 'google', label: 'Google', value: s.google || 0, color: '#4285F4' },
+                { key: 'instagram', label: 'Instagram', value: s.instagram || 0, color: '#E1306C' },
+                { key: 'facebook', label: 'Facebook', value: s.facebook || 0, color: '#1877F2' },
+                { key: 'direct', label: 'Diretto', value: s.direct || 0, color: '#D4AF37' },
+                { key: 'altro', label: 'Altro', value: s.altro || 0, color: '#9ca3af' },
+              ];
+              const total = rows.reduce((a, r) => a + r.value, 0) || 1;
+              return (
+                <div className="backdrop-blur-md bg-white/5 border border-white/10 p-6 rounded-2xl space-y-5">
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-lg" aria-hidden="true">🌍</span>
+                    <div>
+                      <h3 className="text-sm font-semibold text-white">Provenienza dei visitatori</h3>
+                      <p className="text-xs text-white/40">Da dove arrivano le persone che visitano il sito</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3.5">
+                    {rows.map((r) => {
+                      const pct = Math.round((r.value / total) * 100);
+                      return (
+                        <div key={r.key} className="space-y-1.5">
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="flex items-center gap-2 text-white/80">
+                              <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: r.color }} />
+                              {r.label}
+                            </span>
+                            <span className="text-white/60">
+                              <span className="font-semibold text-white">{r.value.toLocaleString('it-IT')}</span>
+                              <span className="ml-2 text-white/40">{pct}%</span>
+                            </span>
+                          </div>
+                          <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                            <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pct}%`, backgroundColor: r.color }} />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })()}
+
             {/* Quick Tips or conversion summary */}
             <div className="backdrop-blur-xl bg-white/[0.01] border border-white/5 p-5 rounded-2xl space-y-3">
               <h3 className="text-xs font-mono font-bold text-[#D4AF37] uppercase tracking-widest">🔥 Consigli per lo smartphone</h3>

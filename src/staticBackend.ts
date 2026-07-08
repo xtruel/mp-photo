@@ -64,10 +64,15 @@ function handle(method: string, path: string, body: AnyObj): Response | null {
 
   // POST /api/stats/increment
   if (method === 'POST' && path === '/api/stats/increment') {
-    const { type } = body;
+    const { type, source } = body;
     if (type === 'views') db.stats.views = (db.stats.views || 0) + 1;
     else if (type === 'whatsappClicks') db.stats.whatsappClicks = (db.stats.whatsappClicks || 0) + 1;
     else if (type === 'quotes') db.stats.quotes = (db.stats.quotes || 0) + 1;
+    else if (type === 'source') {
+      if (!db.stats.sources) db.stats.sources = { google: 0, instagram: 0, facebook: 0, direct: 0, altro: 0 };
+      const key = ['google', 'instagram', 'facebook', 'direct'].includes(source) ? source : 'altro';
+      db.stats.sources[key] = (db.stats.sources[key] || 0) + 1;
+    }
     writeDb(db);
     return json({ success: true, stats: db.stats });
   }

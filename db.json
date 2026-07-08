@@ -1,8 +1,15 @@
 {
   "stats": {
-    "views": 1752,
+    "views": 1762,
     "quotes": 48,
-    "whatsappClicks": 185
+    "whatsappClicks": 185,
+    "sources": {
+      "google": 812,
+      "instagram": 486,
+      "facebook": 301,
+      "direct": 128,
+      "altro": 27
+    }
   },
   "quotes": [
     {

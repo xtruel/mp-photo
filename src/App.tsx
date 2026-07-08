@@ -55,19 +55,41 @@ export default function App() {
   useEffect(() => {
     fetchDbState();
     
-    // Increment views stat once on load
-    const incrementViews = async () => {
+    // Detect where the visitor came from (utm_source first, then referrer).
+    const detectSource = (): string => {
+      try {
+        const utm = new URLSearchParams(window.location.search).get('utm_source');
+        const hay = (utm || document.referrer || '').toLowerCase();
+        if (!hay) return 'direct';
+        if (hay.includes('google')) return 'google';
+        if (hay.includes('instagram') || hay.includes('ig')) return 'instagram';
+        if (hay.includes('facebook') || hay.includes('fb') || hay.includes('fban')) return 'facebook';
+        // Same-site navigation counts as direct
+        if (hay.includes(window.location.hostname)) return 'direct';
+        return 'altro';
+      } catch {
+        return 'altro';
+      }
+    };
+
+    // Increment views + traffic source once on load
+    const trackVisit = async () => {
       try {
         await fetch('/api/stats/increment', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ type: 'views' })
         });
+        await fetch('/api/stats/increment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ type: 'source', source: detectSource() })
+        });
       } catch (e) {
-        console.error('Failed to increment views:', e);
+        console.error('Failed to track visit:', e);
       }
     };
-    incrementViews();
+    trackVisit();
   }, []);
 
   // Handle adding direct reviews
