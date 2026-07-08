@@ -12,6 +12,7 @@ import Portfolio from './components/Portfolio';
 import CtaBand from './components/CtaBand';
 import WhyChooseUs from './components/WhyChooseUs';
 import Reviews from './components/Reviews';
+import Gallery from './components/Gallery';
 import FAQ from './components/FAQ';
 import QuoteForm from './components/QuoteForm';
 import WhatsAppFloat from './components/WhatsAppFloat';
@@ -298,11 +299,13 @@ export default function App() {
 
               <WhyChooseUs />
               
-              <Reviews 
-                reviews={dbState.reviews} 
+              <Reviews
+                reviews={dbState.reviews}
                 onAddReview={handleAddReview}
               />
-              
+
+              <Gallery />
+
               <FAQ />
 
             </main>
