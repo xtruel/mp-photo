@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "views": 1744,
+    "quotes": 48,
+    "whatsappClicks": 185
+  },
+  "quotes": [
+    {
+      "id": "q-1",
+      "name": "Alessandro Rossi",
+      "email": "alessandro.rossi@example.it",
+      "phone": "+39 347 123 4567",
+      "service": "auto",
+      "description": "Fotoritocco per annuncio di vendita. Rimuovere riflessi sulla carrozzeria, migliorare la luminosità generale ed eliminare la targa.",
+      "files": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80"
+      ],
+      "date": "2026-07-07T14:30:00Z",
+      "status": "Reviewing",
+      "internalNotes": "Auto di lusso nera. Richiede rimozione riflessi complessa."
+    },
+    {
+      "id": "q-2",
+      "name": "Giulia Bianchi",
+      "email": "giulia.b@studiofotografico.com",
+      "phone": "+39 333 987 6543",
+      "service": "ritratti",
+      "description": "Servizio di fotoritocco beauty per 5 ritratti moda. Richiesta levigatura della pelle naturale (micro-dodge and burn), correzione toni della pelle ed esaltazione dello sguardo.",
+      "files": [
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+      ],
+      "date": "2026-07-06T09:15:00Z",
+      "status": "Pending"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "p-1",
+      "title": "Porsche 911 Carrera S",
+      "category": "auto",
+      "beforeImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "afterImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "description": "Fotoritocco per automotive marketing: rimozione riflessi indesiderati, esaltazione dei riflessi dorati del sole, bilanciamento del contrasto ed enfasi sul design aerodinamico.",
+      "featured": true,
+      "beforeFilter": "saturate-[0.6] brightness-[0.8] contrast-[0.85] blur-[0.5px]",
+      "afterFilter": "saturate-[1.3] brightness-[1.08] contrast-[1.12]"
+    },
+    {
+      "id": "p-2",
+      "title": "Villa Moderna sul Lago",
+      "category": "immobili",
+      "beforeImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "afterImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "description": "Fotoritocco architettonico: raddrizzamento delle linee verticali, bilanciamento delle luci e ombre (simulazione HDR), rimpiazzo del cielo con un tramonto dorato ed eliminazione di fili elettrici.",
+      "featured": true,
+      "beforeFilter": "saturate-[0.4] brightness-[0.8] contrast-[0.85] sepia-[0.1]",
+      "afterFilter": "saturate-[1.25] brightness-[1.12] contrast-[1.05]"
+    },
+    {
+      "id": "p-3",
+      "title": "Ritratto Fine Art",
+      "category": "ritratti",
+      "beforeImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+      "afterImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+      "description": "Ritratto editoriale di lusso: levigatura della pelle non distruttiva conservando la texture originale, correzione cromatica dei capelli, enfasi sull'iride, e color grading caldo e cinematografico.",
+      "featured": true,
+      "beforeFilter": "grayscale-[0.3] brightness-[0.85] contrast-[0.9]",
+      "afterFilter": "saturate-[1.15] brightness-[1.05] contrast-[1.08] sepia-[0.05]"
+    },
+    {
+      "id": "p-4",
+      "title": "Tramonto sullo Yosemite",
+      "category": "paesaggi",
+      "beforeImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "afterImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "description": "Recupero paesaggistico: bilanciamento della gamma dinamica per rivelare i dettagli nelle zone d'ombra della roccia, rimozione della foschia atmosferica, ed esaltazione dei caldi colori del tramonto.",
+      "featured": true,
+      "beforeFilter": "saturate-[0.5] brightness-[0.75] contrast-[0.85] blur-[0.2px]",
+      "afterFilter": "saturate-[1.35] brightness-[1.12] contrast-[1.15]"
+    },
+    {
+      "id": "p-5",
+      "title": "Orologio Minimal di Lusso",
+      "category": "prodotti",
+      "beforeImage": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
+      "afterImage": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
+      "description": "Fotoritocco e-commerce di lusso: pulizia da polvere e micro-graffi invisibili a occhio nudo, allineamento perfetto dei riflessi sui metalli, correzione del bianco, ed isolamento dello sfondo.",
+      "featured": true,
+      "beforeFilter": "saturate-[0.3] brightness-[0.85] contrast-[0.8] sepia-[0.1]",
+      "afterFilter": "saturate-[1.2] brightness-[1.15] contrast-[1.2]"
+    }
+  ],
+  "services": [
+    {
+      "id": "s-1",
+      "key": "auto",
+      "icon": "Car",
+      "title": "Automotive Retouching",
+      "subtitle": "Esaltiamo le linee, eliminiamo i riflessi, creiamo pura emozione.",
+      "shortDesc": "Rendiamo le foto di auto irresistibili per inserzioni di vendita, cataloghi e marketing.",
+      "longDesc": "Il fotoritocco automotive richiede un occhio attento ai riflessi, alla geometria e al colore. Rimuoviamo imperfezioni stradali, riflessi indesiderati di alberi o palazzi sulla carrozzeria, sostituiamo gli sfondi per creare un look da studio, ed esaltiamo i dettagli dei cerchioni e della vernice. Perfetto per concessionarie, collezionisti privati ed editoria di lusso.",
+      "pricing": "A partire da 15€ / foto",
+      "slug": "servizio-auto"
+    },
+    {
+      "id": "s-2",
+      "key": "immobili",
+      "icon": "Home",
+      "title": "Immobiliare & Architettura",
+      "subtitle": "Spazi luminosi, linee perfette e viste spettacolari.",
+      "shortDesc": "Ottimizzazione di foto per agenzie immobiliari, hotel e interior designer.",
+      "longDesc": "Aiutiamo a vendere o affittare immobili fino al 40% più velocemente. Correggiamo le aberrazioni prospettiche (linee cadenti), fondiamo diverse esposizioni (HDR) per mostrare sia gli interni luminosi che la vista mozzafiato dalle finestre, sostituiamo cieli grigi con caldi tramonti, e rimuoviamo oggetti di disturbo come cavi elettrici o disordine. Ideale per annunci di alto livello.",
+      "pricing": "A partire da 20€ / foto",
+      "slug": "servizio-immobili"
+    },
+    {
+      "id": "s-3",
+      "key": "ritratti",
+      "icon": "User",
+      "title": "Ritrattistica & Beauty",
+      "subtitle": "Retouch di lusso naturale, per far risplendere la tua unicità.",
+      "shortDesc": "Fotoritocco per ritratti personali, profili aziendali LinkedIn, modelle e moda.",
+      "longDesc": "La nostra filosofia è un ritocco naturale e invisibile. Eseguiamo levigatura della pelle avanzata tramite separazione delle frequenze e dodge & burn per mantenere intatta la trama naturale dei pori. Correggiamo le imperfezioni temporanee, esaltiamo la lucentezza degli occhi e dei capelli, imbianchiamo delicatamente i denti e modelliamo i volumi del viso con il digital make-up.",
+      "pricing": "A partire da 10€ / foto",
+      "slug": "servizio-ritratti"
+    },
+    {
+      "id": "s-4",
+      "key": "paesaggi",
+      "icon": "Mountain",
+      "title": "Paesaggi & Fine Art",
+      "subtitle": "Colori vibranti e atmosfere mozzafiato degne di una stampa d'arte.",
+      "shortDesc": "Sviluppo digitale e color grading professionale per foto naturalistiche e di viaggio.",
+      "longDesc": "Trasformiamo uno scatto piatto in un'opera d'arte. Regoliamo l'esposizione zonale per dare tridimensionalità, eliminiamo la foschia, applichiamo un color grading mirato per far risaltare le tonalità calde o fredde della natura, e puliamo la scena da elementi di disturbo come turisti, cartelli o spazzatura. Perfetto per fotografi, blogger e amanti del viaggio.",
+      "pricing": "A partire da 12€ / foto",
+      "slug": "servizio-paesaggi"
+    },
+    {
+      "id": "s-5",
+      "key": "prodotti",
+      "icon": "ShoppingBag",
+      "title": "Fotoritocco di Prodotto",
+      "subtitle": "Dettagli definiti, materiali realistici, conversioni massime.",
+      "shortDesc": "Fotoritocco e-commerce d'élite per Amazon, Shopify e cataloghi pubblicitari.",
+      "longDesc": "Nel commercio elettronico, l'immagine è tutto. Rimuoviamo la polvere, i riflessi e i micro-graffi. Scontorniamo il prodotto posizionandolo su sfondo bianco puro (RGB 255) o creiamo ombre e riflessi realistici su superfici d'appoggio. Regoliamo con precisione millimetrica i colori per garantire la massima fedeltà cromatica rispetto al prodotto reale, riducendo i resi.",
+      "pricing": "A partire da 8€ / foto",
+      "slug": "servizio-prodotti"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r-1",
+      "author": "Marco Valenti",
+      "rating": 5,
+      "text": "Servizio eccellente! Ho inviato le foto della mia auto per metterla in vendita e il lavoro fatto è stato incredibile. Hanno rimosso i riflessi dei palazzi e la carrozzeria sembrava appena uscita dal concessionario. Venduta in 4 giorni. Consigliatissimi!",
+      "date": "2026-06-28",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+      "source": "google",
+      "reply": "Grazie mille Marco! Siamo davvero felici che il nostro ritocco abbia contribuito ad una vendita così rapida!"
+    },
+    {
+      "id": "r-2",
+      "author": "Elena M.",
+      "rating": 5,
+      "text": "Lavoro con M.P. Photo da più di un anno per i ritratti delle modelle del mio brand di moda. La separazione delle frequenze che effettuano è incredibile, la pelle rimane naturale senza l'effetto di plastica finta. Rapidi e precisi.",
+      "date": "2026-06-15",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+      "source": "google"
+    },
+    {
+      "id": "r-3",
+      "author": "Studio Immobiliare San Giovanni",
+      "rating": 5,
+      "text": "Affidiamo a loro tutti i nostri fotoritocchi per gli immobili di pregio. La sostituzione del cielo con il tramonto e il raddrizzamento delle linee cambiano completamente l'aspetto degli annunci. Ottimo rapporto qualità/prezzo.",
+      "date": "2026-05-30",
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80",
+      "source": "google"
+    }
+  ],
+  "customPages": [
+    {
+      "id": "cp-1",
+      "title": "Fotoritocco Matrimoniale di Lusso",
+      "slug": "fotoritocco-matrimoni",
+      "content": "<h1>Fotoritocco Matrimoniale Professionale</h1><p>Il giorno del tuo matrimonio merita ricordi indimenticabili. M.P. Photo offre un servizio speciale dedicato a sposi e fotografi di cerimonia.</p><h3>Cosa include il nostro servizio matrimoniale:</h3><ul><li>Correzione luci ed esposizione per cerimonie all'aperto o al chiuso</li><li>Rimozione di invitati o oggetti indesiderati sullo sfondo</li><li>Color grading romantico, vintage o moderno in base alle vostre preferenze</li><li>Pelle perfetta per gli sposi con tecniche di ritocco invisibili</li></ul><p>Richiedi oggi un preventivo gratuito e riceverai un'anteprima gratuita su una foto a tua scelta!</p>",
+      "createdAt": "2026-07-05T10:00:00Z",
+      "metaDescription": "Servizio di fotoritocco per foto di matrimonio. Ottimizzazione luci, rimozione elementi di disturbo e pelle perfetta.",
+      "isPublished": true
+    }
+  ],
+  "settings": {
+    "heroTitle": "Dai nuova vita alle tue fotografie.",
+    "heroSubtitle": "Fotoritocco professionale per auto, immobili, ritratti, paesaggi e prodotti.",
+    "whatsappNumber": "393471234567",
+    "contactEmail": "info@mpphoto.it",
+    "showSpecialOffer": true,
+    "specialOfferText": "🔥 SCONTO 15% sul tuo primo ordine con preventivo online!",
+    "showBeforeAfterSandbox": true
+  }
+}

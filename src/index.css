@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* =========================================================
+   M.P. Photo — Design foundation
+   iPhone / Apple feel: SF Pro system stack, soft rounding,
+   quiet typography (no monospace label clutter).
+   ========================================================= */
+
+@theme {
+  /* Apple system stack first (SF Pro on iPhone/Mac), Inter fallback */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Neutralise every `font-mono` in the app -> no monospace label look */
+  --font-mono: var(--font-sans);
+
+  /* Unified gold scale */
+  --color-gold: #d4af37;
+  --color-gold-soft: #e6c675;
+  --color-gold-deep: #a8842a;
+
+  /* Softer, more consistent radii */
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv11", "ss01";
+  letter-spacing: -0.011em;           /* SF-like optical tightening */
+}
+
+/* Headings: tighter tracking, Apple-style */
+h1, h2, h3 {
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+/* Calm down the endless uppercase micro-labels the generator produced:
+   keep them, but make them read as refined kickers, not ransom notes. */
+.uppercase {
+  letter-spacing: 0.06em;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-gold);
+  color: #000;
+}
+
+/* ---------- Native dropdowns: dark popup so option text stays visible ----------
+   Fixes the "invisible text" bug where the OS renders the <option> list on a
+   white background while the app theme uses light text. */
+select {
+  color-scheme: dark;
+}
+select option,
+select optgroup {
+  background-color: #1c1c1e;
+  color: #ffffff;
+}
+
+/* ---------- Custom range sliders (Hero lab) ---------- */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  border: 2px solid #000;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.45);
+  transition: transform 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  border: 2px solid #000;
+}
+
+/* ---------- Scrollbar (dark, slim) ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.28); }
+
+/* ---------- Focus visibility (accessibility) ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ---------- Motion helpers ---------- */
+@keyframes mp-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: mp-fade-in 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+
+@keyframes mp-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Reveal-on-scroll utility (added via IntersectionObserver in components that opt in) */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* iOS: allow smooth momentum scrolling inside admin scroll areas */
+.momentum-scroll { -webkit-overflow-scrolling: touch; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  html { scroll-behavior: auto; }
+}

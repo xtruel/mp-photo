@@ -1,0 +1,8 @@
+{
+  "name": "M.P. Photo",
+  "description": "Sito web premium, moderno e minimalista per fotoritocco professionale online con slider prima/dopo, richieste di preventivo e pannello di controllo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
